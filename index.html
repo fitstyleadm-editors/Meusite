@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FIT style - Loja de Roupas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>FIT style</h1>
+    <nav>
+      <button id="btn-carrinho">Carrinho (<span id="contador-carrinho">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="produtos">
+      <!-- Produtos vão aparecer aqui via JavaScript -->
+    </section>
+
+    <section id="carrinho-container" class="escondido">
+      <h2>Seu Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+      <p>Total: R$ <span id="total">0.00</span></p>
+      <button id="btn-finalizar">Finalizar Compra</button>
+      <button id="btn-fechar-carrinho">Fechar</button>
+    </section>
+
+    <section id="checkout-container" class="escondido">
+      <h2>Finalizar Compra</h2>
+      <form id="form-checkout">
+        <label>
+          Nome:
+          <input type="text" name="nome" required />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Endereço:
+          <textarea name="endereco" required></textarea>
+        </label>
+        <button type="submit">Confirmar Pedido</button>
+      </form>
+      <button id="btn-voltar">Voltar</button>
+    </section>
+
+    <section id="mensagem" class="escondido"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
